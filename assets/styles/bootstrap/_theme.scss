@@ -310,6 +310,9 @@ p.demo_store {
     .wc-south.opc-complete-order {
       display: none;
     }
+    .order-total.recurring-total {
+      display:none;
+    }
     .woocommerce-checkout-review-order-table {
           width: 100%;
         tr {

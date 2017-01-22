@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
+
 if ( $order ) : ?>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
@@ -69,3 +71,15 @@ if ( $order ) : ?>
 	<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
 
 <?php endif; ?>
+
+
+<div class="section section-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+            sdff
+            </div>
+            </div>
+            </div>
+            </div>
+            
