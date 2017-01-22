@@ -1,0 +1,59 @@
+// Embeds responsive
+//
+// Credit: Nicolas Gallagher and SUIT CSS.
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  background: $gray-base;
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+}
+
+// Modifier class for 16:9 aspect ratio
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+
+// Modifier class for 4:3 aspect ratio
+.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}
+
+.embed-responsive-asset {
+  position: relative;
+  margin-top: 3em;
+  &:after {
+    content: '';
+    position: absolute;
+    top: -4em;
+    right: -4em;
+    color:white;
+    display: block;
+    z-index: $zindex-assets-after;
+    background: url('../images/mascot-v1.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 166px;
+    height: 415px;
+  }
+}
+
+.section-video {
+  .embed-responsive {
+    margin-bottom: 1.5em;
+  }
+}

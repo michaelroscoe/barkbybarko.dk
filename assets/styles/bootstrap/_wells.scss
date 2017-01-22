@@ -1,0 +1,64 @@
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+    min-height: 20px;
+    margin-top: 50px;
+    padding: 19px;
+    border-radius: $border-radius-base;
+    background-color: $well-bg;
+    blockquote {
+        border-color: #ddd;
+        border-color: rgba(0,0,0,.15);
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    ul {
+        li:last-child {
+            margin-top: 1em;
+        }
+    }
+    .col-hcard {
+        margin-top: -3em;
+    }
+    img {
+        width: 100%;
+        height: 125px;
+        margin-bottom: 1em;
+        border: none;
+        background: $gray-base;
+    }
+    .rating {
+        color: $brand-info;
+        i {
+            font-size: 1.5em;
+        }
+    }
+
+    &.well-info{
+        background: $brand-info;
+    }
+
+    &.well-info,
+    &.well-default  {
+        border-radius: 0;
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Sizes
+.well-lg {
+    padding: 30px;
+    border-radius: $border-radius-large;
+}
+.well-sm {
+    padding: 9px;
+    border-radius: $border-radius-small;
+}

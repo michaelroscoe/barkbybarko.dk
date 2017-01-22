@@ -1,0 +1,11 @@
+{
+  "name": "mikkeltschentscher",
+  "homepage": "https://github.com/mikkeltschentscher/mikkeltschentscher.dk",
+  "authors": [
+    "Mikkel Tschentscher <hello@mikkeltschentscher.dk>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "overrides": {}
+}

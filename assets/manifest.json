@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "main.min.js": {
+      "files": [
+        "scripts/bootstrap/bootstrap.js",
+        "scripts/bootstrap/button.js",
+        "scripts/bootstrap/collapse.js",
+        "scripts/bootstrap/dropdown.js",
+        "scripts/bootstrap/modal.js",
+        "scripts/bootstrap/tooltip.js",
+        "scripts/bootstrap/popover.js",
+        "scripts/bootstrap/tab.js",
+        "scripts/bootstrap/transition.js",
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "jquery.min.js": {
+      "files": [
+        "scripts/jquery/jquery.js"
+      ]
+    }
+  },
+  "config": {
+    "devUrl": "http://localhost/root/barkbybarko.dk"
+  }
+}

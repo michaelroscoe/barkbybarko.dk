@@ -1,0 +1,361 @@
+
+//
+// Page Wrapper
+// --------------------------------------------------
+
+body {
+    background: #d8c8bb;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: $body-max-width;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 -200px 35px #919191;
+}
+
+//
+// Sections
+// --------------------------------------------------
+
+.brand-logo {
+  background: url('../images/logo-primary.png');
+  width: 75px;
+  height: 45px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+//
+// Sections
+// --------------------------------------------------
+
+.section {
+    padding: 8em 0;
+    //
+    // Section Default
+    // --------------------------------------------------
+    &.section-default {
+        color: $gray-base;
+        background: white;
+    }
+    //
+    // Section Primary
+    // --------------------------------------------------
+    &.section-primary {
+        color: white;
+        background: $brand-primary;
+        a {
+            text-decoration: underline;
+            color: inherit;
+            &.btn {
+                text-decoration: none;
+            }
+        }
+    }
+    //
+    // Section Info
+    // --------------------------------------------------
+    &.section-info {
+        color: white;
+        background: $brand-info;
+        .well {
+            color: $gray-base;
+        }
+        .brand {
+            color: $gray-base;
+        }
+    }
+    //
+    // Section Gray Base
+    // --------------------------------------------------
+    &.section-gray {
+        padding: 4em 0 4em 0;
+        color: white;
+        background: $gray-base;
+    }
+    //
+    // Section Tabs
+    // --------------------------------------------------
+    &.section-tabs {
+        padding: 0 0 4em 0;
+        .tab-container {
+            margin-top: -42px;
+        }
+        .tab-content {
+            padding-top: 4em;
+        }
+    }
+    //
+    // Section Related
+    // --------------------------------------------------
+    &.section-related {
+        padding: 4em 0 4em 0;
+        color: $gray-base;
+        a {
+            text-decoration: underline;
+            color: inherit;
+        }
+        hr {
+            margin: 1em 0 2em 0;
+            border-color: rgba( $gray-base, .15);
+        }
+    }
+    &.section-base {
+        background: #e0d3c3;
+    }
+    &.section-light {
+        background: #fafafa;
+    }
+    //
+    // Section Archive
+    // --------------------------------------------------
+    &.section-archive {
+        padding: 4em 0 8em 0;
+        .row-video {
+            .post-categories {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: $text-muted;
+            }
+            .post-title {
+                margin-bottom: 10px;
+            }
+            .post-meta {
+                margin-bottom: 15px;
+                color: $text-muted;
+            }
+            .post-description {
+                margin-bottom: 0;
+            }
+        }
+    }
+    //
+    // Section Footer
+    // --------------------------------------------------
+    &.section-product-intro {
+        padding-bottom: 13em;
+        padding-top: 2em;
+    }
+    &.section-product-info {
+        padding-top: 0;
+        .well {
+            margin-top: -6em;
+            padding: 3em 1em;
+        }
+    }
+    //
+    // Section Footer
+    // --------------------------------------------------
+    &.section--footer {
+        padding: 6em 0 8em 0;
+        .row-primary {
+            margin-bottom: 2em;
+        }
+        a {
+            font-weight: 700;
+            display: inline-block;
+            padding-right: 2em;
+        }
+        .text-right {
+            a {
+                padding-right: 0;
+                padding-left: 2em;
+            }
+        }
+    }
+}
+
+//
+// Banners
+// --------------------------------------------------
+
+.banner-ad-lg {
+    display: block;
+    width: 100%;
+    height: 450px;
+    margin: 0 0 2em 0;
+    border: none;
+    background: $gray-lightest;
+}
+
+.banner-ad-md {
+    display: block;
+    width: 100%;
+    height: 325px;
+    margin: 0 0 2em 0;
+    border: none;
+    background: $gray-lightest;
+}
+
+//
+// Post Lists
+// --------------------------------------------------
+
+.post-list {
+    margin: 0 0 2em 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: block;
+        padding: .75em 0;
+        border-bottom: 1px solid $gray-lightest;
+        span {
+            font-size: $font-size-small;
+            display: block;
+            color: $text-muted;
+        }
+    }
+}
+
+//
+// Product Panels
+// --------------------------------------------------
+
+
+.panels {
+  padding: 2em;
+
+  .panel-default,
+  .panel-heading {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .panel-heading {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 0;
+  }
+}
+
+//
+// WooCommerce
+// --------------------------------------------------
+
+p.demo_store {
+    top: inherit;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: $body-max-width;
+    margin-right: auto;
+    margin-left: auto;
+    color: $gray-base;
+    background-color: $brand-warning;
+    position: fixed;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 0;
+}
+
+//
+// WooCommerce - Checkout Fields
+// --------------------------------------------------
+
+.wcopc {
+    max-width: 425px;
+    margin: 0 auto;
+    .woocommerce-shipping-fields,
+    .woocommerce-billing-fields {
+        h3 {
+            display: none;
+        }
+        .form-row {
+            @extend .form-group;
+            label {
+                float: left; 
+                width: 30%;
+            }
+            input,
+            textarea {
+                float: left; 
+                width: 70%;
+                max-width: 70%;
+            }
+            &:after {
+                position: relative;
+                display: block;
+                clear: both;
+                content: '';
+            }
+        }
+        .input-text {
+            @extend .form-control;
+        }
+    }
+    .wc_payment_methods {
+        display: none!important;
+    }
+    .cart_item {
+        display: none;
+    }
+    .cart-subtotal {
+        display: none;
+    }
+    .recurring-totals {
+      display: none;
+    }
+    thead {
+        display: none;
+    }
+
+    #order_review_heading {
+      display: none;
+    }
+    .wc-south.opc-complete-order {
+      display: none;
+    }
+    .woocommerce-checkout-review-order-table {
+          width: 100%;
+        tr {
+            th:first-child {
+                width: 30%;
+            }
+        }
+    }
+
+    label {
+      &.checkbox {
+        display: inline;
+      }
+    }
+
+    .woocommerce-checkout-payment {
+      .button {
+        @extend .btn;
+        @extend .btn-primary;
+        margin: 0 auto;
+        min-width: 200px;
+      }
+    }
+
+    .wc-terms-and-conditions {
+      background: rgba(255, 255, 255, 0.15);
+    padding-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 1em;
+    line-height: 1.20em;
+    padding-top: 8px;
+    border-radius: 1px;
+    padding-right: 0.1em;
+    font-weight: 300;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    label {
+          font-size: .9em;
+    position: relative;
+    top: 1px;
+    }
+    }
+}
+
+
+.row-disclaimer {
+  margin-top: 2.5em;
+}
