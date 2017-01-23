@@ -129,10 +129,10 @@ add_action( 'init', 'woa_remove_header_cart' );
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'skatein'),
-        'footer_navigation' => __('Footer Navigation', 'skatein'),
-        'about_navigation' => __('Footer Navigation', 'skatein'),
-        'help_navigation' => __('Footer Navigation', 'skatein')
+        'primary_navigation' => __('Primary Navigation', 'barko'),
+        'primary_navigation_logged_in' => __('Primary Navigation Logged In', 'barko'),
+        'footer_navigation_primary' => __('Footer Navigation Primary', 'barko'),
+        'footer_navigation_secondary' => __('Footer Navigation Secondary', 'barko')
     ]);
 
 
@@ -156,7 +156,7 @@ add_action( 'init', 'woa_remove_header_cart' );
     add_filter( 'embed_oembed_html','bootstrap_wrap_oembed',10,1);
 
 
-    
+
 
 /**
  * Class Name: wp_bootstrap_navwalker
@@ -325,3 +325,19 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
         }
     }
 }
+
+
+
+    // Adds an options page for Advanced Custom Fields (Can have multiple)
+    if( function_exists('acf_add_options_page') ) {
+
+        acf_add_options_page(array(
+            'page_title'    => 'Theme General Settings',
+            'menu_title'    => 'Theme Settings',
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+
+    }
+

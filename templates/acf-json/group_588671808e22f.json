@@ -6,9 +6,66 @@
             "placement": "top",
             "endpoint": 0,
             "key": "field_588677eebd869",
-            "label": "Appearance",
+            "label": "General",
             "name": "",
             "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1,
+            "key": "field_5886903d0ec68",
+            "label": "Login URL",
+            "name": "global_login_url",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1,
+            "key": "field_588690feda11f",
+            "label": "Account URL",
+            "name": "global_account_url",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1,
+            "key": "field_58869111da120",
+            "label": "Default Product URL",
+            "name": "global_default_product_url",
+            "type": "page_link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -211,7 +268,7 @@
             "rows": "",
             "key": "field_58867881bd872",
             "label": "Body Scripts (Start)",
-            "name": "global_scripts_header",
+            "name": "global_scripts_body_start",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -375,9 +432,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "options_page",
                 "operator": "==",
-                "value": "post"
+                "value": "theme-general-settings"
             }
         ]
     ],
@@ -389,5 +446,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1485208668
+    "modified": 1485213987
 }

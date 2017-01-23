@@ -15,7 +15,7 @@ get_template_part('partials/module', 'header'); ?>
 <div class="section section-default">
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-2 col-md-8">
+            <div class="col-md-8">
                 <?php
                     // Start the loop.
                     while ( have_posts() ) : the_post();

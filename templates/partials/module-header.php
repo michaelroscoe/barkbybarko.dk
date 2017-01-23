@@ -16,11 +16,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
     
-        <?php
+    <?php if ( is_user_logged_in() ) { ?>
+
+    <?php
         wp_nav_menu( array(
-          'menu'              => 'primary navigation',
-          'theme_location'    => 'primary navigation',
-          'depth'             => 2,
+          'menu'              => 'Primary Navigation Logged In',
+          'theme_location'    => 'primary_navigation_logged_in',
+          'depth'             => 1,
           'container'         => 'ul',
           'container_class'   => '',
           'container_id'      => '',
@@ -37,7 +39,27 @@
           </div>
           <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
+
+    
+<?php } else { ?>
+   <?php
+        wp_nav_menu( array(
+          'menu'              => 'Primary Navigation',
+          'theme_location'    => 'primary_navigation',
+          'depth'             => 1,
+          'container'         => 'ul',
+          'container_class'   => '',
+          'container_id'      => '',
+          'menu_class'        => 'nav navbar-nav navbar-right',
+          'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+          'walker'            => new wp_bootstrap_navwalker())
+        );
+        ?>
+    
+<?php } ?>
+
         
+
     </div>
   </div>
 </nav>
