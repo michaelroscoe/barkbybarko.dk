@@ -5,13 +5,183 @@
         {
             "placement": "top",
             "endpoint": 0,
-            "key": "field_58867915337f3",
-            "label": "Page Attributes",
+            "key": "field_5886791f337f5",
+            "label": "Product Information",
             "name": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "single_product": "Single Product",
+                "list_products": "List Products"
+            },
+            "default_value": [
+                "single_product"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "key": "field_58867ee4e470d",
+            "label": "Product Type",
+            "name": "landingpage_product_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58867d99848ce",
+            "label": "Product ID",
+            "name": "landingpage_product_id",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867ee4e470d",
+                        "operator": "==",
+                        "value": "single_product"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58867f12e470e",
+            "label": "Product IDs",
+            "name": "landingpage_product_ids",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867ee4e470d",
+                        "operator": "==",
+                        "value": "list_products"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_58867915337f3",
+            "label": "Checkout",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "Add order Comments",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_58867c977b0ed",
+            "label": "Add Order Comments",
+            "name": "landingpage_add_order_comments",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58867cad7b0ee",
+            "label": "Order Comment Label",
+            "name": "landingpage_order_comment_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867c977b0ed",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58867cc47b0ef",
+            "label": "Order Comment Placeholder",
+            "name": "landingpage_order_comment_placeholder",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867c977b0ed",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -35,15 +205,15 @@
             }
         },
         {
-            "default_value": "",
-            "new_lines": "wpautop",
-            "maxlength": "",
-            "placeholder": "",
-            "rows": "",
-            "key": "field_5886798681abf",
-            "label": "Disclaimer",
-            "name": "landingpage_disclaimer",
-            "type": "textarea",
+            "default_value": 0,
+            "message": "Add page header to landingpage",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_58867d007b0f0",
+            "label": "Add Page Header",
+            "name": "landingpage_add_page_header",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -54,15 +224,104 @@
             }
         },
         {
-            "placement": "top",
-            "endpoint": 0,
-            "key": "field_5886791f337f5",
-            "label": "Product Information",
-            "name": "",
-            "type": "tab",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58867d0f7b0f1",
+            "label": "Page Title",
+            "name": "landingpage_page_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867d007b0f0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58867d1e7b0f2",
+            "label": "Page Subtitle",
+            "name": "landingpage_page_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867d007b0f0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "new_lines": "wpautop",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": "",
+            "key": "field_58867d2a7b0f3",
+            "label": "Page Description",
+            "name": "landingpage_page_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867d007b0f0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "width": "",
+            "height": "",
+            "key": "field_58867d3a7b0f4",
+            "label": "Page Video",
+            "name": "landingpage_page_video",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867d007b0f0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -86,6 +345,25 @@
             }
         },
         {
+            "default_value": 0,
+            "message": "Add FAQs to page",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_58867d487b0f5",
+            "label": "Add Page FAQs",
+            "name": "landingpage_add_page_faqs",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -97,7 +375,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867d487b0f5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -156,6 +442,49 @@
             "type": "repeater",
             "instructions": "",
             "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867d487b0f5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_58867f421dfd1",
+            "label": "Page Disclaimer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "new_lines": "wpautop",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": "",
+            "key": "field_5886798681abf",
+            "label": "Disclaimer",
+            "name": "landingpage_disclaimer",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -178,22 +507,8 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content",
-        "excerpt",
-        "custom_fields",
-        "discussion",
-        "comments",
-        "revisions",
-        "slug",
-        "author",
-        "format",
-        "featured_image",
-        "categories",
-        "tags",
-        "send-trackbacks"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1485207966
+    "modified": 1485209435
 }

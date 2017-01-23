@@ -21,6 +21,102 @@
         {
             "placement": "top",
             "endpoint": 0,
+            "key": "field_58867c2a8ebed",
+            "label": "Banner Ads",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_58867c2f8ebee",
+            "label": "Single Video Ad",
+            "name": "global_single_video_ad",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_58867c3d8ebef",
+            "label": "Single Video Ad URL",
+            "name": "global_single_video_ad_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_58867c518ebf1",
+            "label": "Archive Ad",
+            "name": "global_single_video_ad",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_58867c468ebf0",
+            "label": "Archive Ad URL",
+            "name": "global_archive_ad_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "top",
+            "endpoint": 0,
             "key": "field_588678bfbd874",
             "label": "Footer",
             "name": "",
@@ -293,5 +389,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1485207793
+    "modified": 1485208668
 }
