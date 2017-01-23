@@ -55,6 +55,55 @@ get_template_part('partials/module', 'header'); ?>
   </div>
 </div>
 
+
+<div class="section section-default">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <h2 class="h1 brand">Har du et af disse 34 meget almindelige adfærdsproblemer med din hund lige nu?</h2>
+      <br>
+        <ol class="list-questions">
+          <li>Hiver I snoren </li>
+          <li>Hopper op af dig og/eller andre </li>
+          <li>Kommer ikke når du kalder (Indkald) </li>
+          <li>Renlighedstræning </li>
+          <li>Napper og bidder </li>
+          <li>Græder når du/i forlader hjemmet </li>
+          <li>Reagerer ikke på kommandoer </li>
+          <li>Graver unødvendigt </li>
+          <li>Tyggeproblemer </li>
+          <li> Gemmer/stjæler ting </li>
+          <li> Separationsangst </li>
+          <li> Aggressiv overfor andre hunde </li>
+          <li> Aggressiv overfor dine andre hunde </li>
+          <li> Aggressiv overfor fremmede mennesker </li>
+          <li> Aggressiv overfor dig </li>
+          <li> Aggressiv overfor andre objekter </li>
+          <li> Aggressiv overfor andre dyr</li>
+          <li> Gør ad hoveddøren </li>
+          <li> Gør mens i går tur </li>
+          <li> Gør mens i kører bil </li>
+          <li> Gør omkring og i nærheden af  huset </li>
+          <li> Gør når han/hun er alene hjemme </li>
+          <li> Problemer med hyperaktivitet </li>
+          <li> Voldsom slikken eller tyggen </li>
+          <li> Følger efter og/eller er opmærksomhedssøgende </li>
+          <li> Jagter sin hale </li>
+          <li> Hopper op i møblerne </li>
+          <li> Bange for ting </li>
+          <li> Bange for andre mennesker eller hunde </li>
+          <li> Stikker af </li>
+          <li> Frygt for høje lyde (fyrværkeri etc.) </li>
+          <li> Problemer med urin </li>
+          <li> Unik og uforklarlig besættelse </li>
+          <li> Spiser afføring (Coprophagia)</li>
+      </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="section section-info">
   <div class="container">
     <div class="row">

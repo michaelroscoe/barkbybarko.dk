@@ -362,3 +362,19 @@ p.demo_store {
 .row-disclaimer {
   margin-top: 2.5em;
 }
+
+
+.list-questions {
+    padding:0;
+    margin:0;
+    li {
+        width: 50%;
+    float: left;
+    padding: 0;
+    font-size: 1.25em;
+    font-style: italic;
+    color: #272727;
+    list-style-position: inside;
+    padding: 0 0.25em;
+    }
+}
