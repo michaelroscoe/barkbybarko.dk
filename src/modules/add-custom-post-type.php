@@ -66,25 +66,12 @@ add_action('init', function () {
 });
 
 
-function wpshout_add_custom_post_types_to_query( $query ) { 
-    if( 
-        // If we're trying to generate an archive page, and
-        is_archive() &&
-
-        // If the current query is the page's main query, and
-        $query->is_main_query() &&
-
-        // If the query hasn't already been modified to ignore
-        // filters like the one we're writing
-        empty( $query->query_vars['suppress_filters'] )
-    ) {
-
-        // Then set the query to fetch posts of type
-        // both "post" and "course"
-        $query->set( 'post_type', array( 
-            'post',
-            'video'
-        ) );
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'video'
+        ));
+      return $query;
     }
 }
-add_action( 'pre_get_posts', 'wpshout_add_custom_post_types_to_query' );
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );

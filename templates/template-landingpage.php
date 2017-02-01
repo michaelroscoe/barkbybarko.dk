@@ -14,128 +14,108 @@
 __( 'Landingpage Template ', 'barko' );
 
 get_header();
-get_template_part('partials/module', 'header'); ?>
+get_template_part('partials/module', 'header'); 
+
+// vars
+$product_type = get_field( 'landingpage_product_type');
+$product_id = get_field( 'landingpage_product_id');
+$product_ids = get_field( 'landingpage_product_ids');
+$add_order_comments = get_field( 'landingpage_add_order_comments');
+$order_comment_label = get_field( 'landingpage_order_comment_label');
+$order_comment_placeholder = get_field( 'landingpage_order_comment_placeholder');
+$add_page_header = get_field( 'landingpage_add_page_header');
+$page_title = get_field( 'landingpage_page_title');
+$page_subtitle = get_field( 'landingpage_page_subtitle');
+$page_description = get_field( 'landingpage_page_description');
+$page_video = get_field( 'landingpage_page_video');
+$add_page_faqs = get_field( 'landingpage_add_page_faqs');
+$faq_title = get_field( 'landingpage_faq_title');
+$faqs = get_field( 'landingpage_faqs');
+$disclaimer = get_field( 'landingpage_disclaimer' ); ?>
 
 
-<div class="section section-base section-product-intro">
-    <div class="container">
-        <div class="col-md-6">
-            <br><br>
-            <h1 class="brand">Få en gratis buddybox</h1>
-            <h2 class="brand">Når du køber 3 måneders abonnement på BarkoBark. Ingen binding. </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="col-md-6">
-            <div class="embed-responsive embed-responsive-16by9 embed-responsive-asset">
-              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/22-n8?rel=0"></iframe>
+  <div class="section section-base section-product-intro">
+      <div class="container">
+          <div class="col-md-6">
+
+              <?php if( $page_title ) : ?>
+                <h1 class="brand"><?php echo $page_title ?></h1>
+              <?php endif; ?>
+
+              <?php if( $page_subtitle ) : ?>
+                <h2 class="brand"><?php echo $page_subtitle ?></h2>
+              <?php endif; ?>
+
+              <?php if( $page_description )  : ?>
+                <p><?php echo $page_description ?></p>
+              <?php endif; ?>
+
           </div>
-      </div>
+          <div class="col-md-6">
+              <div class="embed-responsive embed-responsive-16by9 embed-responsive-asset">
+                <?php echo $page_video ?>
+            </div>
+        </div>
+    </div>
   </div>
-</div>
 
-<div class="section section-light section-product-info">
+<div class="section section-light section-product-info <?php if( $add_page_comments ) : ?> hide-comments <?php endif; ?>">
     <div class="container">
         <div class="row no-gutter">
             <div class="col-md-5 col-lg-6">
                 <div class="well well-default">
 
-                <div class="wcopc">
-                
-                  <br><br><br><br><br><br><br><br><br><br>
-
-                </div>
+                <div class="wcopc"></div>
                  </div>
-                    
-                    <div class="row">
+                      
+                <?php if( have_rows('landingpage_faqs') ):  $i = 0; ?>
+                  <div class="row">
                         <div class="col-md-12">
                             <div class="panels">
-                                <h4>Ofte stillede spørgsmål:</h4>
+                              <h4 class="h1 brand text-center"><?php the_field('landingpage_faq_title'); ?></h4>
+                                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                      <?php while ( have_rows('landingpage_faqs') ) : the_row(); ?>
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="heading<?php echo $i; ?>">
+                                          <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $i; ?>" aria-expanded="false" aria-controls="collapse<?php echo $i; ?>"><?php the_sub_field('faq_title'); ?></a></h4>
+                                        </div>
+                                        <div id="collapse<?php echo $i; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $i; ?>">
+                                          <div class="panel-body">
+                                            <?php the_sub_field('faq_description'); ?>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <?php $i++; endwhile; ?>
 
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                  <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                      <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Hvad koster BarkoBark?</a></h4>
+                                  </div>
+          <?php endif; ?>
+
+
+                </div>
+
+                <?php if ( have_posts()  ) : ?>
+                  <div class="col-md-7 col-lg-6">
+                      <div class="well well-info">
+                          <?php
+                          
+                          while ( have_posts() ) : the_post(); 
+                            the_content();
+                          endwhile;
+                          ?>
+                      </div>
                   </div>
-                  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                      <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
+                <?php endif ;?>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
-                  <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Jeg har flere hunde - hvordan gør jeg så?</a></h4>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                  <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-              <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Er produkterne i en BuddyBox godkendte i Danmark?</a></h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-              <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Findes der en allergivenlig BuddyBox?</a></h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-              <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Hvad er BuddyBox?</a></h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-              <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Hvad er der i en BuddyBox?</a></h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-        </div>
-    </div>
-</div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-7 col-lg-6">
-                    <div class="well well-info">
-                        <?php
-                        // Start the loop.
-                        while ( have_posts() ) : the_post(); 
-                        the_content();
-                        endwhile;
-                        ?>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-disclaimer">
-              <div class="col-md-offset-2 col-md-8 text-center">
-                <p class="small">BuddyBox tilbydes af Barko A/S, Norvangen 3D Port 6, 4220 Korsør, CVR: 36087188, Denmark. Mail: kundeservice@barko.dk. Samlet pris for 3 måneder: kr. 627,- ekskl. levering.</p>
+            
+            <?php if ( $disclaimer ) : ?>
+              <div class="row row-disclaimer">
+                <div class="col-md-offset-2 col-md-8 text-center">
+                  <p class="small"><?php echo $disclaimer; ?></p>
                 </div>
               </div>
+            <?php endif ;?>
+
+
         </div>
     </div>
 

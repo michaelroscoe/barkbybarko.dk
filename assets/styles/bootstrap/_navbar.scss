@@ -388,39 +388,6 @@
 }
 
 
-// Alternate navbars
-// --------------------------------------------------
-
-.single-video {
-  .navbar-default {
-    background-color: $gray-base;
-    border-color: $gray-base;
-  }
-  .brand-logo {
-    background: url('../images/logo-neg.png');
-    width: 75px;
-    height: 45px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-}
-
-.page-template-template-landingpage {
-  .navbar-default {
-    background-color: #e0d3c3;
-    border-color: #e0d3c3;
-  }
-  .brand-logo {
-    background: url('../images/logo-neg.png');
-    width: 75px;
-    height: 45px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-}
-
 
 // Default navbar
 .navbar-default {
@@ -478,13 +445,13 @@
   }
 
   .navbar-toggle {
-    border-color: $navbar-default-toggle-border-color;
+    border-color: transparent;
     &:hover,
     &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
+      background-color: transparent;
     }
     .icon-bar {
-      background-color: $navbar-default-toggle-icon-bar-bg;
+      background-color: #fff;
     }
   }
 
@@ -535,6 +502,40 @@
       }
     }
   }
+
+
+// Alternate navbars
+// --------------------------------------------------
+
+.single-video {
+  .navbar-default {
+    background-color: $gray-base;
+    border-color: $gray-base;
+  }
+  .brand-logo {
+    background: url('../images/logo-neg.png');
+    width: 75px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.page-template-template-landingpage {
+  .navbar-default {
+    background-color: #e0d3c3;
+    border-color: #e0d3c3;
+  }
+  .brand-logo {
+    background: url('../images/logo-pos.png');
+    width: 75px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
 
 
   // Links in navbars

@@ -17,7 +17,7 @@
   
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only"><?php echo _x( 'Åben Navigation', 'label', 'barko' ); ?></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -47,7 +47,7 @@
         ?>
 
      
-<form class="navbar-form navbar-right" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form class="hidden-xs navbar-form navbar-right" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
      <div class="form-group">
             <label class="sr-only" ><?php echo _x( 'Søg efter:', 'label', 'barko' ); ?></label>
             <input type="search" class="form-control"  placeholder="<?php echo esc_attr_x( 'Søg &hellip;', 'placeholder', 'barko' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
