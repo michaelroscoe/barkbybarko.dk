@@ -46,13 +46,15 @@
         );
         ?>
 
-         <form class="navbar-form navbar-right" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-          <div class="form-group">
-            <label class="sr-only" ><?php echo _x( 'Search for:', 'label', 'skatein' ); ?></label>
-            <input class="form-control" type="search"  required placeholder="<?php echo esc_attr_x( 'Skatepark, city or address', 'placeholder', 'skatein' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-          </div>
-          <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </form>
+     
+<form class="navbar-form navbar-right" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+     <div class="form-group">
+            <label class="sr-only" ><?php echo _x( 'Søg efter:', 'label', 'barko' ); ?></label>
+            <input type="search" class="form-control"  placeholder="<?php echo esc_attr_x( 'Søg &hellip;', 'placeholder', 'barko' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+        </div>
+    <button type="submit" class="btn btn-default" ><span class="sr-only"><?php echo _x( 'Søg', 'submit button', 'barko' ); ?></span><i class="fa fa-search" aria-hidden="true"></i></button>
+</form>
+
 
     
 <?php } else { ?>

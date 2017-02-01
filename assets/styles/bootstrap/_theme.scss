@@ -151,7 +151,17 @@ body {
     //
     // Section Footer
     // --------------------------------------------------
-    &.section--footer {
+    &.section-footer {
+        text-align: center;
+        .text-right {
+            text-align: center;
+        }
+        @media (min-width: $screen-md-min) {
+            text-align: left;
+            .text-right {
+            text-align: right;
+        }
+        }
         padding: 6em 0 8em 0;
         .row-primary {
             margin-bottom: 2em;
@@ -469,6 +479,7 @@ p.demo_store {
 
 
 .featured-image {
+    position:relative;
     &:after {
         position: absolute;
         z-index: 100;
@@ -505,4 +516,9 @@ p.demo_store {
         background: rgba(0, 0, 0, .26);
         box-shadow: 0 0 10px -3px black;
     }
+}
+
+
+.img-testimonial {
+    border-radius: 100%;
 }

@@ -12,7 +12,7 @@
  */
 ?>
 
-<div class="section section-primary section--footer">
+<div class="section section-primary section-footer">
     <div class="container">
         <div class="row row-primary">
             <div class="col-md-7">
@@ -24,8 +24,8 @@
                 <p class="small"><?php the_field( 'global_company', 'options' ); ?>, <?php the_field( 'global_address', 'options' ); ?>, <?php the_field( 'global_zipcode', 'options' ); ?> <?php the_field( 'global_city', 'options' ); ?>. CVR: <?php the_field( 'global_vat', 'options' ); ?></p>
             </div>
         </div>
-        <div class="row row-secondary">
-            <div class="col-md-8 small">
+        <div class="row row-secondary hidden-xs">
+            <div class="col-md-7 small">
                  <?php
                     wp_nav_menu( 
                         array(
@@ -40,7 +40,7 @@
                     );
                 ?>
             </div>
-            <div class="col-md-4 small text-right">
+            <div class="col-md-5 small text-right">
                  <?php
                     wp_nav_menu( 
                         array(

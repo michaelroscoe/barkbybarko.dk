@@ -131,31 +131,23 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             }
         },
         {
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
+            "default_value": "",
+            "placeholder": "",
             "key": "field_58867bde22805",
             "label": "Ad Image URL",
             "name": "single_video_ad_url",
-            "type": "image",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             }
@@ -201,7 +193,7 @@
             ],
             "taxonomy": [],
             "min": "",
-            "max": "",
+            "max": 4,
             "filters": [
                 "search"
             ],
@@ -238,5 +230,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1485210297
+    "modified": 1485985642
 }

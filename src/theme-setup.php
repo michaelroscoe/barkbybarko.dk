@@ -136,6 +136,17 @@ function themeprefix_add_to_cart_redirect() {
 }
 
 
+// Limit search to post type
+// http://www.wpbeginner.com/wp-tutorials/how-to-limit-search-results-for-specific-post-types-in-wordpress/
+function searchfilter($query) {
+    if ($query->is_search && !is_admin() ) {
+        $query->set('post_type',array('video'));
+    }
+return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');
+
 // https://wordpress.org/support/topic/how-to-remove-the-shopping-cart-icon-below-the-header/?replies=5
 add_action( 'init', 'woa_remove_header_cart' );
  function woa_remove_header_cart() {

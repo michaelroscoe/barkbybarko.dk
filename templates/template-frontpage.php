@@ -105,6 +105,14 @@ get_template_part('partials/module', 'header'); ?>
         <div class="well well-lg">
           <div class="row">
             <div class="col-md-4 col-hcard">
+
+            <?php 
+              $portrait = get_sub_field( 'portrait', 'options' );
+              $portrait_size = 'thumbnail'; 
+              echo wp_get_attachment_image( $portrait, $portrait_size,  false, array( 'class' => 'img-responsive img-testimonial' ) ); 
+            ?>
+             </figure>
+
               <?php the_sub_field('portrait'); ?>
               <ul class="list-unstyled">
                 <li class="text-bold"><?php the_sub_field('name'); ?></li>

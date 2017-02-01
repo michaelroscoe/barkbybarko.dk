@@ -75,7 +75,6 @@ $posts = get_field( 'single_video_related' );
                     <div role="tabpanel" class="tab-pane active" id="information">
                         <div class="row">
                             <div class="col-md-6">
-                                <?php echo $video_content; ?>
                                 <?php if( $video_content ) : echo $video_content; else:  _e( 'Ingen videoinformation endnu', 'barko' ); edit_post_link( __( 'Rediger video', 'barko' ), '<p>', '</p>'); endif; ?>
                             </div>
                             <div class="col-md-6">
