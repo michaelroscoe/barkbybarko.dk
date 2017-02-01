@@ -38,7 +38,9 @@ $video_date = get_the_date();
             </div>
         <?php else : ?>
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <?php echo wp_get_attachment_image( $video_placeholder_standard, $video_placeholder_size,  false, array( 'class' => 'img-responsive img-placeholder' ) ); ?>
+                <figure class="featured-image">
+                    <?php echo wp_get_attachment_image( $video_placeholder_standard, $video_placeholder_size,  false, array( 'class' => 'img-responsive img-placeholder' ) ); ?>
+                </figure>
             </a>
         <?php endif; ?>
 

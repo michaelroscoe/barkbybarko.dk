@@ -168,7 +168,7 @@
             "mime_types": "",
             "key": "field_58867c518ebf1",
             "label": "Archive Ad",
-            "name": "global_single_video_ad",
+            "name": "global_archive_video_ad",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -470,5 +470,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1485776821
+    "modified": 1485983021
 }

@@ -13,14 +13,14 @@
  */
 
 // vars
-$ad = get_field( 'global_single_video_ad', 'barko' ); 
+$ad = get_field( 'global_archive_video_ad', 'options' ); 
 $ad_size = 'large';
-$ad_url = get_field( 'global_archive_ad_url', 'barko' ); 
+$ad_url = get_field( 'global_archive_ad_url', 'options' ); 
 
 ?>
 
 <aside class="col-md-4 aside">
-
+    
     <?php if ( $ad ) : ?>
         <a href="<?php echo $ad_url; ?>"><?php echo wp_get_attachment_image( $ad, $ad_size,  false, array( 'class' => 'img-responsive ad-aside' ) ); ?></a>
     <?php endif; ?>

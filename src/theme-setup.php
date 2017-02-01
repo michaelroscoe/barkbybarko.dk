@@ -41,6 +41,20 @@ add_image_size( 'video-placeholder-lg', 720, 405, true ); // hard crop mode
 
 
 
+// Remove “Category:”, “Tag:”, “Author:” from the_archive_title
+// http://wordpress.stackexchange.com/questions/179585/remove-category-tag-author-from-the-archive-title
+add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+            $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( '', false );
+        } elseif ( is_author() ) {
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+        }
+    return $title;
+});
+
+
 // Remove Product Images
 // http://wpsites.net/web-design/remove-woocommerce-single-thumbnail-images-from-product-details-page/
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );

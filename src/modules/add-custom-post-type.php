@@ -65,6 +65,7 @@ add_action('init', function () {
     register_post_type('video', $config);
 });
 
+
 function wpshout_add_custom_post_types_to_query( $query ) { 
     if( 
         // If we're trying to generate an archive page, and
