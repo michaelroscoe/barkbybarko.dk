@@ -22,12 +22,12 @@ body {
 // --------------------------------------------------
 
 .brand-logo {
-  background: url('../images/logo-primary.png');
-  width: 75px;
-  height: 45px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+    width: 75px;
+    height: 45px;
+    background: url('../images/logo-primary.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 
 //
@@ -138,8 +138,8 @@ body {
     // Section Footer
     // --------------------------------------------------
     &.section-product-intro {
-        padding-bottom: 13em;
         padding-top: 2em;
+        padding-bottom: 13em;
     }
     &.section-product-info {
         padding-top: 0;
@@ -157,13 +157,13 @@ body {
             margin-bottom: 2em;
         }
         ul {
-            padding:0;
-            margin:0;
-            list-style:none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
             li {
-                padding:0;
-                margin:0;
-                display:inline;
+                display: inline;
+                margin: 0;
+                padding: 0;
             }
         }
         a {
@@ -228,18 +228,17 @@ body {
 
 
 .panels {
-  padding: 2em;
-
-  .panel-default,
-  .panel-heading {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-  }
-  .panel-heading {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-left: 0;
-  }
+    padding: 2em;
+    .panel-default,
+    .panel-heading {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+    .panel-heading {
+        padding-left: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+    }
 }
 
 //
@@ -247,6 +246,7 @@ body {
 // --------------------------------------------------
 
 p.demo_store {
+    position: fixed;
     top: inherit;
     right: 0;
     bottom: 0;
@@ -254,13 +254,12 @@ p.demo_store {
     width: 100%;
     max-width: $body-max-width;
     margin-right: auto;
+    margin-bottom: 0;
     margin-left: auto;
+    padding: 1em;
+    text-align: center;
     color: $gray-base;
     background-color: $brand-warning;
-    position: fixed;
-    text-align: center;
-    padding: 1em;
-    margin-bottom: 0;
 }
 
 //
@@ -278,12 +277,12 @@ p.demo_store {
         .form-row {
             @extend .form-group;
             label {
-                float: left; 
+                float: left;
                 width: 30%;
             }
             input,
             textarea {
-                float: left; 
+                float: left;
                 width: 70%;
                 max-width: 70%;
             }
@@ -308,83 +307,124 @@ p.demo_store {
         display: none;
     }
     .recurring-totals {
-      display: none;
+        display: none;
     }
     thead {
         display: none;
     }
-
     #order_review_heading {
-      display: none;
+        display: none;
     }
     .wc-south.opc-complete-order {
-      display: none;
+        display: none;
     }
     .order-total.recurring-total {
-      display:none;
+        display: none;
     }
     .woocommerce-checkout-review-order-table {
-          width: 100%;
+        width: 100%;
         tr {
             th:first-child {
                 width: 30%;
             }
         }
     }
-
     label {
-      &.checkbox {
-        display: inline;
-      }
+        &.checkbox {
+            display: inline;
+        }
     }
-
     .woocommerce-checkout-payment {
-      .button {
-        @extend .btn;
-        @extend .btn-primary;
-        margin: 0 auto;
-        min-width: 200px;
-      }
-    }
+        .button {
+            min-width: 200px;
+            margin: 0 auto;
 
-    .wc-terms-and-conditions {
-      background: rgba(255, 255, 255, 0.15);
-    padding-bottom: 10px;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding-left: 1em;
-    line-height: 1.20em;
-    padding-top: 8px;
-    border-radius: 1px;
-    padding-right: 0.1em;
-    font-weight: 300;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    label {
-          font-size: .9em;
-    position: relative;
-    top: 1px;
+            @extend .btn;
+            @extend .btn-primary;
+        }
     }
+    .wc-terms-and-conditions {
+        font-weight: 300;
+        line-height: 1.20em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-top: 8px;
+        padding-right: .1em;
+        padding-bottom: 10px;
+        padding-left: 1em;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, .2);
+        border-radius: 1px;
+        background: rgba(255, 255, 255, .15);
+        label {
+            font-size: .9em;
+            position: relative;
+            top: 1px;
+        }
     }
 }
 
 
 .row-disclaimer {
-  margin-top: 2.5em;
+    margin-top: 2.5em;
 }
 
 
 .list-questions {
-    padding:0;
-    margin:0;
-    li {
-        width: 50%;
-    float: left;
+    margin: 0;
     padding: 0;
-    font-size: 1.25em;
-    font-style: italic;
-    color: #272727;
-    list-style-position: inside;
-    padding: 0 0.25em;
+    li {
+        font-size: 1.25em;
+        font-style: italic;
+        float: left;
+        width: 50%;
+        padding: 0;
+        padding: 0 .25em;
+        list-style-position: inside;
+        color: #272727;
+    }
+}
+
+.page-template-template-maintenance {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: #a4d2cd;
+    background-image: url( '../images/skys.png'), url( '../images/texture-white.png'  );
+    background-repeat: no-repeat;
+    background-position: 50% 50%, 50% 100%;
+    background-size: 100%, 50%;
+    h1 {
+        font-family: $font-family-heading;
+        font-size: 6em;
+        line-height: .85em;
+        text-transform: uppercase;
+    }
+    .container-splash {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        padding: 0 2em;
+        text-align: center;
+        color: #fff;
+        box-shadow: none;
+
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+    }
+    .demo_store {
+        display: none;
+    }
+    .wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-shadow: none;
     }
 }

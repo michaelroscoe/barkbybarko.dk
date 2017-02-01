@@ -9,6 +9,7 @@
  * @link https://mikkeltschentscher.dk
  *
  */
+__( 'Landingpage Template ', 'barko' );
 get_header();
 get_template_part('partials/module', 'header'); ?>
 

@@ -34,6 +34,13 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 
+// Register a new image size.
+// https://developer.wordpress.org/reference/functions/add_image_size/
+add_image_size( 'video-placeholder-sm', 360, 202, true ); // hard crop mode
+add_image_size( 'video-placeholder-lg', 720, 405, true ); // hard crop mode
+
+
+
 // Remove Product Images
 // http://wpsites.net/web-design/remove-woocommerce-single-thumbnail-images-from-product-details-page/
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );

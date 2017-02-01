@@ -76,6 +76,30 @@
             }
         },
         {
+            "return_format": "id",
+            "preview_size": "video-placeholder-sm",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_588f27a4f86e3",
+            "label": "Video Placeholder",
+            "name": "global_video_placeholder",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "placement": "top",
             "endpoint": 0,
             "key": "field_58867c2a8ebed",
@@ -446,5 +470,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1485213987
+    "modified": 1485776821
 }

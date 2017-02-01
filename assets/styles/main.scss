@@ -10,13 +10,13 @@
 
 // Reset and dependencies
 @import "bootstrap/normalize";
-@import "bootstrap/print";
-@import "bootstrap/glyphicons";
+// @import "bootstrap/print";
+// @import "bootstrap/glyphicons";
 
 // Core CSS
 @import "bootstrap/scaffolding";
 @import "bootstrap/type";
-@import "bootstrap/code";
+// @import "bootstrap/code";
 @import "bootstrap/grid";
 @import "bootstrap/tables";
 @import "bootstrap/forms";
@@ -25,17 +25,17 @@
 // Components
 @import "bootstrap/component-animations";
 @import "bootstrap/dropdowns";
-@import "bootstrap/button-groups";
-@import "bootstrap/input-groups";
+// @import "bootstrap/button-groups";
+// @import "bootstrap/input-groups";
 @import "bootstrap/navs";
 @import "bootstrap/navbar";
-@import "bootstrap/breadcrumbs";
+// @import "bootstrap/breadcrumbs";
 @import "bootstrap/pagination";
 @import "bootstrap/pager";
 @import "bootstrap/labels";
-@import "bootstrap/badges";
-@import "bootstrap/jumbotron";
-@import "bootstrap/thumbnails";
+// @import "bootstrap/badges";
+// @import "bootstrap/jumbotron";
+// @import "bootstrap/thumbnails";
 @import "bootstrap/alerts";
 @import "bootstrap/progress-bars";
 @import "bootstrap/media";
@@ -47,9 +47,9 @@
 
 // Components w/ JavaScript
 @import "bootstrap/modals";
-@import "bootstrap/tooltip";
-@import "bootstrap/popovers";
-@import "bootstrap/carousel";
+// @import "bootstrap/tooltip";
+// @import "bootstrap/popovers";
+// @import "bootstrap/carousel";
 
 // Utility classes
 @import "bootstrap/utilities";
@@ -66,13 +66,13 @@
 @import "font-awesome/core.scss";
 @import "font-awesome/larger.scss";
 @import "font-awesome/fixed-width.scss";
-@import "font-awesome/list.scss";
-@import "font-awesome/bordered-pulled.scss";
-@import "font-awesome/animated.scss";
-@import "font-awesome/rotated-flipped.scss";
-@import "font-awesome/stacked.scss";
+// @import "font-awesome/list.scss";
+// @import "font-awesome/bordered-pulled.scss";
+// @import "font-awesome/animated.scss";
+// @import "font-awesome/rotated-flipped.scss";
+// @import "font-awesome/stacked.scss";
 @import "font-awesome/icons.scss";
-@import "font-awesome/screen-reader.scss";
+// @import "font-awesome/screen-reader.scss";
 
 
 

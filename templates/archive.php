@@ -18,8 +18,10 @@ get_template_part('partials/module', 'header'); ?>
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-8">
-                        <h1 class="brand">Hundeopdragelse</h1>
-                        <p>Det kan være en stor omvæltning for både menneske og hund, når Fido flytter ind bag husets fire vægge. Skal du til at anskaffe dig en hund, eller har du lige fået en, så vil du måske finde disse råd fra hundeinstruktør Aino Pedersen nyttige.</p>
+                        <?php
+                            the_archive_title( '<h1 class="page-title">', '</h1>' );
+                            the_archive_description( '<div class="taxonomy-description">', '</div>' );
+                        ?>
                     </div>
                 </div>
             </div>
@@ -37,62 +39,19 @@ get_template_part('partials/module', 'header'); ?>
                     </div>
                     <div class="col-md-12">
                         <hr>
-                        <article class="row row-video">
-                            <div class="col-md-6">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/22-n8?rel=0"></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="post-categories">Kategori: <a href="#">Hundeopdragelse</a>, <a href="#">Øvelser</a></p>
-                                <h4 class="post-title"><a href="#">7 gode råd: Lær hvalpen at være alene hjemme</a></h4>
-                                <p class="post-meta">31. oktober 2016 | Niveau: <a href="#">Begynder</a></p>
-                                <p class="post-description">Lad den se, når du går, og giv den lidt hyggeligt at beskæftige sig med, så den lærer at forbinde afskeden med noget rart og...    </p>
-                            </div>
-                        </article>
-                        <hr>
-                        <article class="row row-video">
-                            <div class="col-md-6">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/22-n8?rel=0"></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="post-categories">Kategori: <a href="#">Hundeopdragelse</a>, <a href="#">Øvelser</a></p>
-                                <h4 class="post-title"><a href="#">7 gode råd: Lær hvalpen at være alene hjemme</a></h4>
-                                <p class="post-meta">31. oktober 2016 | Niveau: <a href="#">Begynder</a></p>
-                                <p class="post-description">Lad den se, når du går, og giv den lidt hyggeligt at beskæftige sig med, så den lærer at forbinde afskeden med noget rart og...    </p>
-                            </div>
-                        </article>
-                        <hr>
-                        <article class="row row-video">
-                            <div class="col-md-6">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/22-n8?rel=0"></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="post-categories">Kategori: <a href="#">Hundeopdragelse</a>, <a href="#">Øvelser</a></p>
-                                <h4 class="post-title"><a href="#">7 gode råd: Lær hvalpen at være alene hjemme</a></h4>
-                                <p class="post-meta">31. oktober 2016 | Niveau: <a href="#">Begynder</a></p>
-                                <p class="post-description">Lad den se, når du går, og giv den lidt hyggeligt at beskæftige sig med, så den lærer at forbinde afskeden med noget rart og...    </p>
-                            </div>
-                        </article>
-                        <hr>
-                        <article class="row row-video">
-                            <div class="col-md-6">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/22-n8?rel=0"></iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="post-categories">Kategori: <a href="#">Hundeopdragelse</a>, <a href="#">Øvelser</a></p>
-                                <h4 class="post-title"><a href="#">7 gode råd: Lær hvalpen at være alene hjemme</a></h4>
-                                <p class="post-meta">31. oktober 2016 | Niveau: <a href="#">Begynder</a></p>
-                                <p class="post-description">Lad den se, når du går, og giv den lidt hyggeligt at beskæftige sig med, så den lærer at forbinde afskeden med noget rart og...    </p>
-                            </div>
-                        </article>
-                        <hr>
+
+                        <?php
+                            if ( have_posts() ) : 
+                                while ( have_posts() ) : the_post();
+                                    get_template_part( 'partials/single', 'video-excerpt' );
+                                endwhile;
+                                the_posts_pagination( array(
+                                    'prev_text' => '<span class="screen-reader-text"></span>',
+                                    'next_text' => '<span class="screen-reader-text"></span>',
+                                    'before_page_number' => '<span class="meta-nav screen-reader-text"></span>',
+                                ) );
+                            endif;
+                        ?>
                     </div>
 
                     <div class="col-md-12">
