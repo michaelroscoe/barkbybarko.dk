@@ -12,7 +12,7 @@
 
 // Add registered styles to the theme
 add_action('wp_enqueue_scripts', function () {
-            wp_register_style( 'google_font_stack', 'http://fonts.googleapis.com/css?family=Lato:300,400,700%7CRoboto+Slab:300,400,700', array(), null, 'all' );
+            wp_register_style( 'google_font_stack', 'https://fonts.googleapis.com/css?family=Lato:300,400,700%7CRoboto+Slab:300,400,700', array(), null, 'all' );
 	wp_enqueue_style( 'google_font_stack' );
 
             wp_register_style( 'main',  get_template_directory_uri() .'/dist/styles/main.css', array(), null, 'all' );
@@ -135,6 +135,17 @@ function themeprefix_add_to_cart_redirect() {
  return $checkout_url;
 }
 
+
+// Limit search to post type
+// http://www.wpbeginner.com/wp-tutorials/how-to-limit-search-results-for-specific-post-types-in-wordpress/
+function searchfilter($query) {
+    if ($query->is_search && !is_admin() ) {
+        $query->set('post_type',array('video'));
+    }
+return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');
 
 // https://wordpress.org/support/topic/how-to-remove-the-shopping-cart-icon-below-the-header/?replies=5
 add_action( 'init', 'woa_remove_header_cart' );
