@@ -113,7 +113,6 @@ get_template_part('partials/module', 'header'); ?>
             ?>
              </figure>
 
-              <?php the_sub_field('portrait'); ?>
               <ul class="list-unstyled">
                 <li class="text-bold"><?php the_sub_field('name'); ?></li>
                 <li><?php the_sub_field('city'); ?></li>
