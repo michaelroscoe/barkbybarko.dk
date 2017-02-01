@@ -1,3 +1,17 @@
+<?php
+/**
+ * Description: Header Module
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Barko
+ * @subpackage barkbybarko.dk
+ * @since Version 1.0.0
+ * @author Mikkel Tschentscher
+ * @link https://mikkeltschentscher.dk
+ */
+?>
+
 <nav class="navbar navbar-default">
   <div class="container">
   

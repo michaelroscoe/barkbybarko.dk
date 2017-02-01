@@ -220,6 +220,7 @@ body {
             color: $text-muted;
         }
     }
+    ul { padding-left: 0;}
 }
 
 //
@@ -427,4 +428,9 @@ p.demo_store {
         padding: 0;
         box-shadow: none;
     }
+}
+
+
+.row-video {
+    padding-bottom: 1em;
 }

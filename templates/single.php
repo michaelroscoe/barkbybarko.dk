@@ -1,11 +1,13 @@
 <?php
 /**
- * Description: 
+ * Description: Single Post Template
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Barko
- * @subpackage barkobark.dk
+ * @subpackage barkbybarko.dk
  * @since Version 1.0.0
- * @author Mikkel Tschentscher, hello@mikkeltschentscher.dk
+ * @author Mikkel Tschentscher
  * @link https://mikkeltschentscher.dk
  *
  */

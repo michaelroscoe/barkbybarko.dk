@@ -1,17 +1,21 @@
 <?php
 /**
- * Template name: Frontpage Template 
+ * Template Name: Frontpage Template
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Barko
- * @subpackage barkobark.dk
+ * @subpackage barkbybarko.dk
  * @since Version 1.0.0
- * @author Mikkel Tschentscher, hello@mikkeltschentscher.dk
+ * @author Mikkel Tschentscher
  * @link https://mikkeltschentscher.dk
  *
  */
 __( 'Frontpage Template ', 'barko' );
+
 get_header();
 get_template_part('partials/module', 'header'); ?>
+
 
 <div class="section section-default">
   <div class="container">

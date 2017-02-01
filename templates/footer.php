@@ -1,18 +1,20 @@
 <?php
 /**
- * Description: 
+ * Description: Global Footer Template
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Barko
- * @subpackage barkobark.dk
+ * @subpackage barkbybarko.dk
  * @since Version 1.0.0
- * @author Mikkel Tschentscher, hello@mikkeltschentscher.dk
+ * @author Mikkel Tschentscher
  * @link https://mikkeltschentscher.dk
  *
  */
 ?>          
-            </div>
-            
-	<?php wp_footer(); ?>
+                </div>
+                
+    	<?php wp_footer(); ?>
 
 	</body>
 </html> 

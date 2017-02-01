@@ -1,11 +1,13 @@
 <?php
 /**
- * Template name: Maintenance Template 
+ * Template Name: Maintenance Template
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Barko
- * @subpackage barkobark.dk
+ * @subpackage barkbybarko.dk
  * @since Version 1.0.0
- * @author Mikkel Tschentscher, hello@mikkeltschentscher.dk
+ * @author Mikkel Tschentscher
  * @link https://mikkeltschentscher.dk
  *
  */
@@ -19,7 +21,7 @@ get_header();?>
       <header>
         <h1><?php _e( 'Kommer Snart', 'barko' ); ?></h1>
       </header>
-      <p class="lead"><?php _e( 'Vi lancerer d. 1. marts 2017. Vi glæder os til at byde dig velkommen', 'barko' ); ?></p>
+      <p class="lead"><?php _e( 'Vi lancerer d. 1. marts 2017. Vi glæder os til at byde dig velkommen.', 'barko' ); ?></p>
     </article>
   </section>
 </main>

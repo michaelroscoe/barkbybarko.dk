@@ -1,4 +1,4 @@
-<?php namespace Models;
+<?php 
 
  /**
  * Register custom post type
@@ -59,8 +59,31 @@ add_action('init', function () {
         'has_archive'           => true,
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
-        'capability_type'       => 'page'
+        'capability_type'       => 'post'
     ];
     // Register post type
     register_post_type('video', $config);
 });
+
+function wpshout_add_custom_post_types_to_query( $query ) { 
+    if( 
+        // If we're trying to generate an archive page, and
+        is_archive() &&
+
+        // If the current query is the page's main query, and
+        $query->is_main_query() &&
+
+        // If the query hasn't already been modified to ignore
+        // filters like the one we're writing
+        empty( $query->query_vars['suppress_filters'] )
+    ) {
+
+        // Then set the query to fetch posts of type
+        // both "post" and "course"
+        $query->set( 'post_type', array( 
+            'post',
+            'video'
+        ) );
+    }
+}
+add_action( 'pre_get_posts', 'wpshout_add_custom_post_types_to_query' );
