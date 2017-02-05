@@ -6,7 +6,9 @@
 // Base class
 .well {
     min-height: 20px;
-    margin-top: 50px;
+    @media (min-width: $screen-md-min) {
+        margin-top: 50px;
+    }
     padding: 19px;
     border-radius: $border-radius-base;
     background-color: $well-bg;

@@ -110,6 +110,10 @@ body {
     }
     &.section-base {
         background: #e0d3c3;
+        background-image: url(../images/texture-white.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center bottom;
     }
     &.section-light {
         background: #fafafa;
@@ -141,14 +145,48 @@ body {
     // Section Footer
     // --------------------------------------------------
     &.section-product-intro {
-        padding-top: 2em;
-        padding-bottom: 13em;
+        padding-top: 0em;
+            padding-bottom: 4em;
+        @media (min-width: $screen-md-min) {
+            padding-top: 4em;
+            padding-bottom: 12em;
+        }
+        h1 {
+            margin-top: 1em;
+        }
     }
     &.section-product-info {
-        padding-top: 0;
+        
         .well {
-            margin-top: -6em;
-            padding: 3em 1em;
+            padding: 1em 1em;
+            @media (min-width: $screen-md-min) {
+                padding: 3em 1em;
+                box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
+            }
+            position: relative;
+            z-index: 200;
+        }
+        .well-info {
+            position: relative;
+            box-shadow: none;
+            z-index: 100;
+            background-image: url(../images/texture-white.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 100%;
+        }
+
+        &.section-has-header {
+            padding-top: 0;
+            @media (max-width: $screen-md-min) {
+                background: white;
+            }
+
+            @media (min-width: $screen-md-min) {
+                .well {
+                    margin-top: -6em;
+                }
+            }
         }
     }
     //
@@ -276,6 +314,7 @@ p.demo_store {
     text-align: center;
     color: $gray-base;
     background-color: $brand-warning;
+    z-index: 99999;
 }
 
 //
@@ -285,22 +324,46 @@ p.demo_store {
 .wcopc {
     max-width: 425px;
     margin: 0 auto;
+
+            td {
+            border-top: 0!important;
+        }
+        th {
+            border-top: 0!important;
+            padding: 0!important;
+        }
+    .woocommerce-info {
+        display: none;
+    }
+
+    .shop_table {
+        margin-bottom: 10px;
+    }
     .woocommerce-shipping-fields,
     .woocommerce-billing-fields {
+
+        
         h3 {
-            display: none;
+           font-size: $font-size-h4;
         }
         .form-row {
             @extend .form-group;
             label {
-                float: left;
-                width: 30%;
+                @media (min-width: $screen-sm-min) {
+                    float: left;
+                    width: 30%;
+                }
+                display: block;
+                width: 100%;
             }
             input,
             textarea {
-                float: left;
+                @media (min-width: $screen-sm-min) {
+                    float: left;
                 width: 70%;
                 max-width: 70%;
+                 }
+                 width: 100%;
             }
             &:after {
                 position: relative;
@@ -317,6 +380,50 @@ p.demo_store {
         display: none!important;
     }
     .cart_item {
+        display: none;
+    }
+    .product_title {
+        display: none;
+    }
+    .price {
+        display: none;
+    }
+    
+    .woocommerce-message {
+        display: none;
+    }
+    #opc-product-selection {
+
+        #checkout-products:before {
+            content: 'Vælg ønskede abonnement: ';
+            font-size: $font-size-h4;
+            position: relative;
+            display:block;
+            font-weight:bold;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding:0;
+            margin:0; 
+            list-style:none;
+            li {
+                margin-top: 0!important;
+                
+            }
+        }
+        label {
+            display: inline;
+        }
+        .dash {display:none;}
+        .price {
+            display: inline-block;
+            font-size: $font-size-small - 1px;
+        }
+    }
+    .product_meta {
+        display: none;
+    }
+    .single_add_to_cart_button {
         display: none;
     }
     .cart-subtotal {
@@ -382,7 +489,10 @@ p.demo_store {
 
 
 .row-disclaimer {
-    margin-top: 2.5em;
+    margin-top: 1em;
+    @media (min-width: $screen-md-min) {
+        margin-top: 2.5em;
+    }
 }
 
 

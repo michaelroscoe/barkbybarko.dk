@@ -42,6 +42,8 @@ $disclaimer = get_field( 'landingpage_disclaimer' ); ?>
 <?php endif; ?>
 
 
+<?php if( $add_page_header ) : ?>
+
   <div class="section section-base section-product-intro">
       <div class="container">
           <div class="col-md-6">
@@ -55,7 +57,7 @@ $disclaimer = get_field( 'landingpage_disclaimer' ); ?>
               <?php endif; ?>
 
               <?php if( $page_description )  : ?>
-                <p><?php echo $page_description ?></p>
+                <?php echo $page_description ?>
               <?php endif; ?>
 
           </div>
@@ -67,17 +69,23 @@ $disclaimer = get_field( 'landingpage_disclaimer' ); ?>
     </div>
   </div>
 
-<div class="section section-light section-product-info <?php if( $add_page_comments ) : ?> hide-comments <?php endif; ?>">
+<?php endif; ?>
+
+<div class="section section-light section-product-info <?php if( $add_page_header ) : ?> section-has-header <?php endif; ?><?php if( $add_page_comments ) : ?> hide-comments <?php endif; ?>">
     <div class="container">
         <div class="row no-gutter">
             <div class="col-md-5 col-lg-6">
                 <div class="well well-default">
 
-                <div class="wcopc"></div>
+                <div class="wcopc">
+                  
+                  <?php the_field( 'landingpage_page_content' ); ?>
+
+                </div>
                  </div>
                       
                 <?php if( have_rows('landingpage_faqs') ):  $i = 0; ?>
-                  <div class="row">
+                  <div class="row hidden-xs hidden-sm">
                         <div class="col-md-12">
                             <div class="panels">
                               <h4 class="h4"><?php the_field('landingpage_faq_title'); ?></h4>
@@ -108,6 +116,7 @@ $disclaimer = get_field( 'landingpage_disclaimer' ); ?>
                 <?php if ( have_posts()  ) : ?>
                   <div class="col-md-7 col-lg-6">
                       <div class="well well-info">
+
                           <?php
                           
                           while ( have_posts() ) : the_post(); 

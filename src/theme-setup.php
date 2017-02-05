@@ -373,3 +373,54 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
     }
 
+
+
+
+
+ /**
+  * Add product to cart on page load
+  */
+function add_product_to_cart() {
+    if ( ! is_admin() ) {
+        
+        $product_type = get_field( 'landingpage_product_type');
+            if ( $product_type == 'single_product' ) :
+            $product_id =  get_field( 'landingpage_product_id');
+            $variation_id = 0; // Set to 0 if no variation
+            
+            if ( empty( $product_id ) ) {
+                return;
+            }
+            // Get WC Cart
+            $cart = WC()->cart;
+
+            // Empty WC Cart before adding items
+            $cart->empty_cart();
+            
+            // Get WC Cart items
+            $cart_items = $cart->get_cart();
+            // Check if product is already in cart
+            if ( 0 < count( $cart_items ) ) {
+                foreach ( $cart_items as $cart_item_key => $values ) {
+                    $_product = $values['data'];
+                    // Product is already in cart, bail
+                    if ( $_product->id == $product_id ) {
+                        return;
+                    }
+                }
+            }
+            // Add product to cart
+            $cart->add_to_cart( $product_id, 1, $variation_id );
+
+            // Calculate totals
+            $cart->calculate_totals();
+            
+            // Save cart to session
+            $cart->set_session();
+            
+            // Maybe set cart cookies
+            $cart->maybe_set_cart_cookies();
+        endif;
+    }
+}
+add_action( 'template_redirect', 'add_product_to_cart' );
