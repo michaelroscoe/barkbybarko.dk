@@ -36,7 +36,8 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 $oldcol = 1;
 $col    = 1;
 ?>
-
+<h2 class="h4"><?php _e( 'Adresser:', 'barko'); ?></h2>
+<hr>
 <p>
 	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
 </p>

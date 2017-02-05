@@ -1,0 +1,19 @@
+<?php
+/**
+ * My Account > Subscriptions page
+ *
+ * @author		Prospress
+ * @category	WooCommerce Subscriptions/Templates
+ * @version		2.0.15
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+?>
+<h2 class="h4"><?php esc_html_e( 'My Subscriptions', 'woocommerce-subscriptions' ); ?></h2>
+    <hr>
+<?php
+WC_Subscriptions::get_my_subscriptions_template();
+
+?>

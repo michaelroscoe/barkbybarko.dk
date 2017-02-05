@@ -29,6 +29,9 @@ wc_print_notices();
 do_action( 'woocommerce_account_navigation' ); ?>
 
 <div class="woocommerce-MyAccount-content">
+
+
+
 	<?php
 		/**
 		 * My Account content.
