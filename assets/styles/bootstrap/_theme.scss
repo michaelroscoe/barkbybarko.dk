@@ -260,7 +260,7 @@ body {
 
 p.demo_store {
     position: fixed;
-    top: inherit;
+    top: inherit!important;
     right: 0;
     bottom: 0;
     left: 0;
@@ -521,4 +521,77 @@ p.demo_store {
 
 .img-testimonial {
     border-radius: 100%;
+}
+
+
+.woocommerce-account {
+
+
+.woocommerce {
+    @extend .row;
+}
+
+.shop_table {
+    @extend .table;
+    @extend .table-bordered;
+}
+.woocommerce-ResetPassword,
+.login {
+    @extend .col-md-6;
+    @extend .col-md-offset-3;
+}
+
+.woocommerce-MyAccount-navigation {
+    @extend .col-sm-3;
+
+    ul {
+        padding:0;
+        margin: 0;
+        list-style:none;
+        margin-bottom: 2em;
+        li {
+         a {
+            display: block;
+            color: inherit;
+            border-bottom: 1px solid $gray-lighter;
+            padding: 0.75em 0;
+         }
+
+         &.is-active {
+            font-weight: bold;
+            color: $brand-primary;
+         }
+        }
+    }
+}
+
+.woocommerce-MyAccount-content {
+    @extend .col-sm-9;
+}
+
+.woocommerce-FormRow {
+    @extend .form-group;
+    label {
+        display:block;
+    }
+    .woocommerce-Input {
+        @extend .form-control;
+    }
+}
+.button {
+    @extend .btn;
+    &.pay {
+        @extend .btn-success;
+    }
+    &.view {
+        @extend .btn-default;
+    }
+    &.cancel {
+        @extend .btn-primary;
+    }
+}
+.woocommerce-Button {
+        @extend .btn;
+        @extend .btn-primary;
+    }
 }

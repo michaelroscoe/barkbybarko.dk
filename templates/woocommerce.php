@@ -10,7 +10,13 @@
  *
  */
 get_header();
-get_template_part('partials/module', 'header'); ?>
+get_template_part('partials/module', 'header'); 
+
+if ( is_product() ) :
+    $product_page = get_field( 'landingpage' ); 
+    header('Location: '.$product_page);
+    die();
+endif; ?>
 
 <div class="section section-default">
     <div class="container">

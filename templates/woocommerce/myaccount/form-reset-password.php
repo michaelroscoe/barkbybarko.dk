@@ -23,7 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices(); ?>
 
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
-
+	
+	<h2><?php _e( 'Reset Password', 'woocommerce' ); ?></h2>
 	<p><?php echo apply_filters( 'woocommerce_reset_password_message', __( 'Enter a new password below.', 'woocommerce') ); ?></p>
 
 	<p class="woocommerce-FormRow woocommerce-FormRow--first form-row form-row-first">

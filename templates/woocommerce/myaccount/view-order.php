@@ -23,6 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+
+<h2 class="h4"><?php _e( 'Ordre', 'barko'); ?></h2>
+<hr>
+
 <p><?php
 	printf(
 		__( 'Order #%1$s was placed on %2$s and is currently %3$s.', 'woocommerce' ),

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-
+test
 <?php
 	/**
 	 * woocommerce_before_single_product hook.

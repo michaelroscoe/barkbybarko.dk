@@ -33,6 +33,14 @@ $faq_title = get_field( 'landingpage_faq_title');
 $faqs = get_field( 'landingpage_faqs');
 $disclaimer = get_field( 'landingpage_disclaimer' ); ?>
 
+<?php if ( !$add_order_comments ) : ?>
+  <style>
+    .woocommerce-shipping-fields {
+      display:none;
+    }
+  </style>
+<?php endif; ?>
+
 
   <div class="section section-base section-product-intro">
       <div class="container">
@@ -72,7 +80,7 @@ $disclaimer = get_field( 'landingpage_disclaimer' ); ?>
                   <div class="row">
                         <div class="col-md-12">
                             <div class="panels">
-                              <h4 class="h1 brand text-center"><?php the_field('landingpage_faq_title'); ?></h4>
+                              <h4 class="h4"><?php the_field('landingpage_faq_title'); ?></h4>
                                   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                       <?php while ( have_rows('landingpage_faqs') ) : the_row(); ?>
                                       <div class="panel panel-default">
@@ -92,6 +100,10 @@ $disclaimer = get_field( 'landingpage_disclaimer' ); ?>
 
 
                 </div>
+                </div>
+                </div>
+                </div>
+
 
                 <?php if ( have_posts()  ) : ?>
                   <div class="col-md-7 col-lg-6">
@@ -99,7 +111,29 @@ $disclaimer = get_field( 'landingpage_disclaimer' ); ?>
                           <?php
                           
                           while ( have_posts() ) : the_post(); 
-                            the_content();
+                            $product_type = get_field( 'landingpage_product_type' );
+
+                            if ( $product_type == 'single_product' ) :
+
+                              $product_id = get_field( 'landingpage_product_id' ); 
+                              $shortcode = sprintf(
+                                  '[woocommerce_one_page_checkout template="product-single" product_ids="%1$s"]',
+                                  $product_id
+                              );
+                              echo do_shortcode( $shortcode );
+
+
+                            elseif ( $product_type == 'list_products' ) :
+
+                              $product_ids = get_field( 'landingpage_product_ids' ); 
+                              $shortcode = sprintf(
+                                  '[woocommerce_one_page_checkout template="product-list" product_ids="%1$s"]',
+                                  $product_ids
+                              );
+                              echo do_shortcode( $shortcode );
+
+                            endif; 
+                            
                           endwhile;
                           ?>
                       </div>

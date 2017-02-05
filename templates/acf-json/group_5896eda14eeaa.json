@@ -1,0 +1,48 @@
+{
+    "key": "group_5896eda14eeaa",
+    "title": "Single Product",
+    "fields": [
+        {
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 0,
+            "key": "field_5896eda61e825",
+            "label": "Landingpage",
+            "name": "landingpage",
+            "type": "page_link",
+            "instructions": "Select the landingpage where you're going to sell this product",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1486286316
+}

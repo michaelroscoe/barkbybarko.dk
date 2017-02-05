@@ -28,16 +28,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
-<div class="u-columns col2-set" id="customer_login">
+<div id="customer_login">
 
-	<div class="u-column1 col-1">
+	<div>
 
 <?php endif; ?>
 
-		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
+		
 
 		<form method="post" class="login">
-
+			<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 			<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
