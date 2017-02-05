@@ -392,7 +392,14 @@ p.demo_store {
     .woocommerce-message {
         display: none;
     }
+
     #opc-product-selection {
+
+        .opc-single-product {
+            .price {
+                display: none;
+            }
+        }
 
         #checkout-products:before {
             content: 'Vælg ønskede abonnement: ';
@@ -408,7 +415,7 @@ p.demo_store {
             list-style:none;
             li {
                 margin-top: 0!important;
-                
+
             }
         }
         label {
