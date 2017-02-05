@@ -28,7 +28,7 @@ get_template_part('partials/module', 'header'); ?>
           <div class="col-md-5">
             <a href="<?php the_field( 'frontpage_intro_btn_url' ); ?>" class="btn btn-block btn-lg btn-primary" title="<?php the_field( 'frontpage_intro_btn_text' ); ?>"><?php the_field( 'frontpage_intro_btn_text' ); ?></a>
           </div>
-          <div class="col-md-7">
+          <div class="col-md-7 hidden-xs hidden-sm">
 
           <?php if ( $user_ID ) { ?>
 
@@ -102,9 +102,9 @@ get_template_part('partials/module', 'header'); ?>
       <?php if( have_rows('frontpage_testimonials') ): ?>
         <?php while ( have_rows('frontpage_testimonials') ) : the_row(); ?>
       <div class="col-md-6">
-        <div class="well well-lg">
+        <div class="well well-lg well-testimonial">
           <div class="row">
-            <div class="col-md-4 col-hcard">
+            <div class="col-sm-4 col-hcard">
 
             <?php 
               $portrait = get_sub_field( 'portrait', 'options' );
@@ -120,7 +120,7 @@ get_template_part('partials/module', 'header'); ?>
                 <li class="text-muted small"><?php the_sub_field('status'); ?></li>
               </ul>
             </div>
-            <div class="col-md-8">
+            <div class="col-sm-8">
               <div class="rating">
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>

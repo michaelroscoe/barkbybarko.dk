@@ -33,23 +33,26 @@
   padding-bottom: 75%;
 }
 
-.embed-responsive-asset {
-  position: relative;
-  margin-top: 3em;
-  &:after {
-    content: '';
-    position: absolute;
-    top: -4em;
-    right: -4em;
-    color:white;
-    display: block;
-    z-index: $zindex-assets-after;
-    background: url('../images/mascot-v1.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 166px;
-    height: 415px;
-  }
+
+  .embed-responsive-asset {
+    position: relative;
+    margin-top: 3em;
+    @media (min-width: $screen-md-min) {
+      &:after {
+        content: '';
+        position: absolute;
+        top: -4em;
+        right: -4em;
+        color:white;
+        display: block;
+        z-index: $zindex-assets-after;
+        background: url('../images/mascot-v1.png'); 
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 166px;
+        height: 415px;
+      }
+    }
 }
 
 .section-video {

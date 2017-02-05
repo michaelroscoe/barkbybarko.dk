@@ -35,7 +35,10 @@ body {
 // --------------------------------------------------
 
 .section {
-    padding: 8em 0;
+    padding: 4em 0;
+    @media (min-width: $screen-md-min) {
+        padding: 8em 0;
+    }
     //
     // Section Default
     // --------------------------------------------------
@@ -389,8 +392,10 @@ p.demo_store {
     li {
         font-size: 1.25em;
         font-style: italic;
-        float: left;
-        width: 50%;
+        @media (min-width: $screen-sm-min) {
+            float: left;
+            width: 50%;
+        }
         padding: 0;
         padding: 0 .25em;
         list-style-position: inside;
@@ -521,6 +526,7 @@ p.demo_store {
 
 .img-testimonial {
     border-radius: 100%;
+    max-width: 150px;
 }
 
 
@@ -591,6 +597,57 @@ p.demo_store {
     }
 }
 .woocommerce-Button {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}
+
+
+.woocommerce-order-pay {
+    .woocommerce {
+        text-align:center;
+
+        ul {
+            padding: 0;
+            list-style:none;
+            @extend .lead;
+        }
+
+        .button {
+            @extend .btn;
+            @extend .btn-primary;
+            &.cancel {
+                @extend .btn-default;
+            }
+        }
+    }
+}
+
+
+.woocommerce-checkout {
+    .form-row {
+        @extend .form-group
+    }
+    label {
+        display:block;
+        &.checkbox {
+            display: inline-block;
+        }
+    }
+    input {
+        &[type="text"],
+        &[type="email"] {
+            @extend .form-control;
+        }
+    }
+    .shop_table {
+        @extend .table;
+    }
+    .woocommerce-shipping-fields,
+    .payment_methods {
+        display: none;
+    }
+    .button {
         @extend .btn;
         @extend .btn-primary;
     }

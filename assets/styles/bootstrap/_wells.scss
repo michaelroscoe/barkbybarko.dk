@@ -50,6 +50,15 @@
             text-decoration: underline;
         }
     }
+
+    &.well-testimonial {
+        @media (max-width: $screen-sm-min) {
+            text-align:center;
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
 }
 
 // Sizes
