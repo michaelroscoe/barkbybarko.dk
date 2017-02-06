@@ -49,6 +49,13 @@ add_image_size( 'video-placeholder-lg', 720, 405, true ); // hard crop mode
 
 
 
+function wc_ninja_remove_password_strength() {
+    if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
+        wp_dequeue_script( 'wc-password-strength-meter' );
+    }
+}
+add_action( 'wp_print_scripts', 'wc_ninja_remove_password_strength', 100 );
+
 // Remove “Category:”, “Tag:”, “Author:” from the_archive_title
 // http://wordpress.stackexchange.com/questions/179585/remove-category-tag-author-from-the-archive-title
 add_filter( 'get_the_archive_title', function ($title) {
