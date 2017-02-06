@@ -802,7 +802,7 @@ p.demo_store {
         }
 
         p {
-            display:none
+            display:none;
             &.visible {
                 display: block;
                 }
