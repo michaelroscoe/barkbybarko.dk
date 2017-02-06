@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <p>Har du fået tilbudt et speciel tilbud i forbindelse med din oprettelse, vil denne blive leveret inden for den angivende tidshorisont.</p>
-<p><b>  Herunder finder du dine købsoplysninger vores online hundeskole Bark.</b></p>
+<p><b>  Herunder finder du dine loginoplysninger:</b></p>
 
 <ul>
     <li><?php printf( __( 'Dit brugernavn er: %s', 'woocommerce' ), esc_html( $blogname ), esc_html( $user_login ) ); ?></li>
