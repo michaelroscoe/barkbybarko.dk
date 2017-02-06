@@ -18,10 +18,12 @@ if ( is_product() ) :
     die();
 endif; ?>
 
+
 <div class="section section-default">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+            dfgfg
                 <?php
                     // Start the loop.
                     while ( have_posts() ) : the_post();
