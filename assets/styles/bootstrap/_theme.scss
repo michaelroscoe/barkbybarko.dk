@@ -791,13 +791,7 @@ p.demo_store {
 
 .woocommerce-order-received {
 
-    .section-payment-recieved {
-            padding: 15em 1em 12em 1em
-    background-image: url(../images/thank-you-big.png), url( '../images/texture-white.png');
-    background-position: 50% 30%,top;
-    background-repeat: no-repeat;
-    background-size: 60%,cover;
-    }
+
     .well-reciept {
 
         h2, h3 {
@@ -807,8 +801,11 @@ p.demo_store {
             }
         }
 
-        .my_account_orders {
-            display: none;
+        p {
+            display:none
+            &.visible {
+                display: block;
+                }
         }
 
         .customer_details {
@@ -842,5 +839,16 @@ p.demo_store {
     height: 415px;
 }
 }
+
+.section-payment-recieved {
+            padding: 15em 1em 12em 1em;
+            background-image: url( ../images/thank-you-big.png ), url( ../images/texture-white.png );
+            background-position: 50% 30%, top;
+            background-repeat: no-repeat;
+            background-size: 60%, cover;
     }
+
+
+}
+    
 }

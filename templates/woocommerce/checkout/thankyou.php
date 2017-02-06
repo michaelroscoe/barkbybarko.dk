@@ -56,6 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<h1 class="woocommerce-thankyou-order-received title">
 								<?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ) ); ?>	
 								</h1>
+								<p class="visible">  Du har modtaget en email indeholdende loginoplysninger til siden her, hvor du under <a href="<?php the_field( 'global_account_url', 'options'); ?>">’Min konto’</a> altid vil kunne se aktive køb og anden relevant information.  </p>
 
 						<?php endif; ?>
 
@@ -65,13 +66,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php else : ?>
 
 						<h1 class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></h1>
-
+						
+											<p class="visible">Bark by barko er en online hundeskole, hvor du kan få hjælp, søge viden, eller blot blive inspireret i en lang række emner som omhandler både træning, tricks, pleje og generel omgang med menneskets bedste ven. Hundeskolen tager også fat i en række adfærdsproblemer, og gør dig klogere på hundens generelle adfærd.</p>
 					<?php endif; ?>
 					
-					<p>  Du har modtaget en email indeholdende loginoplysninger til siden her, hvor du under “min konto” altid vil kunne se aktive køb og anden relevant information.  </p>
-					<p>Bark by barko er en online hundeskole, hvor du kan få hjælp, søge viden, eller blot blive inspireret i en lang række emner som omhandler både træning, tricks, pleje og generel omgang med menneskets bedste ven. Hundeskolen tager også fat i en række adfærdsproblemer, og gør dig klogere på hundens generelle adfærd.</p>
-					<p><a class="btn btn-primary btn-lg" href="#">Kom igang nu. Klik her</a></p>
-					<small><em>Såfremt du ønsker at stoppe dit medlemskab efter den oplyste prøveperiode, skal du aktivt selv afmelde dette under ’Min konto’ på www.barkbybarko.dk inden næste fornyelse.</em></small>
+					
+					<p class="visible"><a class="btn btn-primary btn-lg" href="<?= esc_url(home_url('/')); ?>videoer">Kom igang nu. Klik her</a></p>
+					<small><em>Såfremt du ønsker at stoppe dit medlemskab efter den oplyste prøveperiode, skal du aktivt selv afmelde dette under <a href="<?php the_field( 'global_account_url', 'options'); ?>">’Min konto’</a> på <a href="<?= esc_url(home_url('/')); ?>">www.barkbybarko.dk</a> inden næste fornyelse.</em></small>
 
  
 
