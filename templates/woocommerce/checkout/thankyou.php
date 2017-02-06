@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }?>
 
 
-<div class="section section-info section-payment-recieved">
+<div class="section section-info section-payment-recieved hidden-xs hidden-sm">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								<?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ) ); ?>	
 								</h1>
 								<p class="visible">  Du har modtaget en email indeholdende loginoplysninger til siden her, hvor du under <a href="<?php the_field( 'global_account_url', 'options'); ?>">’Min konto’</a> altid vil kunne se aktive køb og anden relevant information.  </p>
-
+								<p class="visible">Bark by barko er en online hundeskole, hvor du kan få hjælp, søge viden, eller blot blive inspireret i en lang række emner som omhandler både træning, tricks, pleje og generel omgang med menneskets bedste ven. Hundeskolen tager også fat i en række adfærdsproblemer, og gør dig klogere på hundens generelle adfærd.</p>
 						<?php endif; ?>
 
 						<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
@@ -66,8 +66,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php else : ?>
 
 						<h1 class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></h1>
-						
-											<p class="visible">Bark by barko er en online hundeskole, hvor du kan få hjælp, søge viden, eller blot blive inspireret i en lang række emner som omhandler både træning, tricks, pleje og generel omgang med menneskets bedste ven. Hundeskolen tager også fat i en række adfærdsproblemer, og gør dig klogere på hundens generelle adfærd.</p>
+						<p class="visible">  Du har modtaget en email indeholdende loginoplysninger til siden her, hvor du under <a href="<?php the_field( 'global_account_url', 'options'); ?>">’Min konto’</a> altid vil kunne se aktive køb og anden relevant information.  </p>
+								<p class="visible">Bark by barko er en online hundeskole, hvor du kan få hjælp, søge viden, eller blot blive inspireret i en lang række emner som omhandler både træning, tricks, pleje og generel omgang med menneskets bedste ven. Hundeskolen tager også fat i en række adfærdsproblemer, og gør dig klogere på hundens generelle adfærd.</p>
+
 					<?php endif; ?>
 					
 					
