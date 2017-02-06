@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php else : ?>
 
-		<h2 class="woocommerce-thankyou-order-received">
+		<h2 class="woocommerce-thankyou-order-received title">
 			<?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ) ); ?>	
 		</h2>
 

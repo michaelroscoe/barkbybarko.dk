@@ -795,8 +795,25 @@ p.demo_store {
     background-size: 60%,cover;
     }
     .well-reciept {
+
+        h2 {
+            display: none;
+            &.title {
+                display: block;
+            }
+        }
+
+        .my_account_orders {
+            display: none;
+        }
+
+        .customer_details {
+            display: none;
+        }
+        address {
+            display: none;
+        }
         margin-top: -10em;
-        text-align: center;
         @media (min-width: $screen-md-min) {
                 padding: 3em 3em;
                 box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
