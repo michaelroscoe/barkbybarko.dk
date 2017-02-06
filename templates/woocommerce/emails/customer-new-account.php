@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <ul>
     <li><?php printf( __( 'Dit brugernavn er: %s', 'woocommerce' ), esc_html( $blogname ), esc_html( $user_login ) ); ?></li>
     <li>Dit password er selvvalgt</li>
-</li>
+</ul>
 
 <p><?php printf( __( 'You can access your account area to view your orders and change your password here: %s.', 'woocommerce' ), make_clickable( esc_url( wc_get_page_permalink( 'myaccount' ) ) ) ); ?></p>
 
