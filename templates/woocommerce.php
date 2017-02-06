@@ -28,7 +28,7 @@ endif; ?>
                     // Start the loop.
                     while ( have_posts() ) : the_post();
                     // Include the content
-                    the_content();
+                        woocommerce_content();
                     // End of the loop.
                     endwhile;
                 ?>

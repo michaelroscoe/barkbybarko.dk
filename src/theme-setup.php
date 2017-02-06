@@ -33,6 +33,14 @@ add_action('wp_enqueue_scripts', function () {
 
 });
 
+// https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
+// Declare WooCommerce Setup
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+
 
 // Register a new image size.
 // https://developer.wordpress.org/reference/functions/add_image_size/
