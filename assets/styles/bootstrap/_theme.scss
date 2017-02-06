@@ -659,7 +659,11 @@ p.demo_store {
     @extend .table;
     @extend .table-striped;
 }
-.woocommerce-ResetPassword,
+
+.woocommerce-ResetPassword {
+    @extend .col-md-6;
+    @extend .col-md-offset-3;
+}
 .login {
     @extend .col-md-6;
     @extend .col-md-offset-3;
@@ -788,7 +792,7 @@ p.demo_store {
 .woocommerce-order-received {
 
     .section-payment-recieved {
-            padding: 15em 1em 15em;
+            padding: 15em 1em 12em 1em
     background-image: url(../images/thank-you-big.png), url( '../images/texture-white.png');
     background-position: 50% 30%,top;
     background-repeat: no-repeat;
@@ -796,7 +800,7 @@ p.demo_store {
     }
     .well-reciept {
 
-        h2 {
+        h2, h3 {
             display: none;
             &.title {
                 display: block;
@@ -813,14 +817,16 @@ p.demo_store {
         address {
             display: none;
         }
-        margin-top: -10em;
+        margin-top: -12em;
         @media (min-width: $screen-md-min) {
                 padding: 3em 3em;
                 box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
-
+                    padding-right: 7em;
             }
             position: relative;
             z-index: 200;
+            @media (min-width: $screen-md-min) {
+                padding: 3em 3em;
             &:after {
     content: '';
     position: absolute;
@@ -834,6 +840,7 @@ p.demo_store {
     background-repeat: no-repeat;
     width: 166px;
     height: 415px;
+}
 }
     }
 }
