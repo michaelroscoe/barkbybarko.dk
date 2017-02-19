@@ -31,7 +31,7 @@ $page_video = get_field( 'landingpage_page_video');
 $add_page_faqs = get_field( 'landingpage_add_page_faqs');
 $faq_title = get_field( 'landingpage_faq_title');
 $faqs = get_field( 'landingpage_faqs');
-$disclaimer = get_field( 'landingpage_disclaimer' ); ?>
+$disclaimer = get_field( 'landingpage_disclaimer', false, false ); ?>
 
 <?php if ( $add_order_comments ) : ?>
   <style>
