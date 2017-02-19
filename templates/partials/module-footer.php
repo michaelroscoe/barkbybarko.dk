@@ -11,7 +11,7 @@
  * @link https://mikkeltschentscher.dk
  */
 ?>
-
+<?php if ( !get_field( 'hide_footer', 'options' ) ) : ?>
 <div class="section section-primary section-footer">
     <div class="container">
         <div class="row row-primary">
@@ -58,3 +58,4 @@
         </div>
     </div>
 </div>
+<?php endif; ?>

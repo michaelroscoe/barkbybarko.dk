@@ -25,6 +25,6 @@
 	<?php wp_head(); ?>
 
 </head>
-<body <?php body_class(); ?>>
+<body <?php if ( !get_field( 'hide_nav', 'options' ) ) : body_class(); else:  body_class( 'hidden-nav' ); endif; ?>>
 
 <div class="wrapper">
