@@ -296,3 +296,9 @@
 .panel-danger {
   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
 }
+
+.panels {
+  h4 {
+    margin-bottom:0;
+  }
+}

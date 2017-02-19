@@ -76,6 +76,8 @@ remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_pr
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
 
+
+
 // Remove checkout fields
 // https://docs.woocommerce.com/document/tutorial-customising-checkout-fields-using-actions-and-filters/
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
@@ -86,9 +88,20 @@ function custom_override_checkout_fields( $fields ) {
     unset($fields['billing']['billing_state']);
     unset($fields['billing']['billing_phone']);
     // unset($fields['order']['order_comments']);
+
+    global $post;
+    if ( get_field( 'landingpage_add_order_comments', $post->ID ) ) :
+         $label = get_field('landingpage_order_comment_label', $post->ID);
+         $placeholder = get_field('landingpage_order_comment_placeholder', $post->ID);
+         $fields['order']['order_comments']['label'] = $label;
+         $fields['order']['order_comments']['placeholder'] = $placeholder;
+    endif;
+     
+
     return $fields;
 }
  
+
 
 // Downloadables
 // http://stackoverflow.com/questions/38666414/how-to-disable-downloadable-product-functionality-in-woocommerce
