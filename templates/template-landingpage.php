@@ -31,7 +31,10 @@ $page_video = get_field( 'landingpage_page_video');
 $add_page_faqs = get_field( 'landingpage_add_page_faqs');
 $faq_title = get_field( 'landingpage_faq_title');
 $faqs = get_field( 'landingpage_faqs');
-$disclaimer = get_field( 'landingpage_disclaimer', false, false ); ?>
+$disclaimer = get_field( 'landingpage_disclaimer', false, false );
+$subscription_title = get_field( 'subscription_title' ); 
+$add_subscription_price = get_field( 'add_subscription_price' ); 
+ ?>
 
 <?php if ( $add_order_comments ) : ?>
   <style>
@@ -41,6 +44,24 @@ $disclaimer = get_field( 'landingpage_disclaimer', false, false ); ?>
     .woocommerce-shipping-fields h3 {
       display:none;
     }
+    
+    <?php if ( !$add_subscription_price ) : ?>
+      .wcopc #opc-product-selection .price { 
+        display: none;
+      }
+    <?php endif; ?>
+
+    <?php if ( $subscription_title ) : ?>
+      .wcopc #opc-product-selection #checkout-products:before {
+        content: '<?php echo $subscription_title ?> ';
+        font-size: 20px;
+        position: relative;
+        display: block;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    <?php endif; ?>
+
   </style>
 <?php endif; ?>
 

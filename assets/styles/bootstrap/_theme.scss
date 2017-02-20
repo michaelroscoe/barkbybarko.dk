@@ -405,14 +405,6 @@ p.demo_store {
             }
         }
 
-        #checkout-products:before {
-            content: 'Vælg ønskede abonnement: ';
-            font-size: $font-size-h4;
-            position: relative;
-            display:block;
-            font-weight:bold;
-            margin-bottom: 10px;
-        }
         ul {
             padding:0;
             margin:0; 

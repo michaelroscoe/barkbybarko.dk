@@ -100,6 +100,60 @@
             }
         },
         {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_58aae3ec14500",
+            "label": "List Title",
+            "name": "subscription_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867ee4e470d",
+                        "operator": "==",
+                        "value": "list_products"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "Hide subscription price",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_58aae3cc144ff",
+            "label": "List Prices",
+            "name": "add_subscription_price",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58867ee4e470d",
+                        "operator": "==",
+                        "value": "list_products"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "placement": "top",
             "endpoint": 0,
             "key": "field_58867915337f3",
@@ -531,5 +585,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1486303184
+    "modified": 1487594558
 }
