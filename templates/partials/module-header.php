@@ -12,25 +12,37 @@
  */
 ?>
 
-<?php if ( !get_field( 'hide_nav', 'options' ) ) : ?>
+
   <nav class="navbar navbar-default">
     <div class="container">
     
       <div class="navbar-header">
+       <?php if ( !get_field( 'hide_nav', 'options' ) ) : ?>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only"><?php echo _x( 'Åben Navigation', 'label', 'barko' ); ?></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+      <?php endif ; ?>
+
+       <?php if ( !get_field( 'hide_nav', 'options' ) ) : ?>
         <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
           <div class="brand-logo"></div>
           </a>
+        <?php else: ?>
+          <div class="navbar-brand">
+          <div class="brand-logo"></div>
+          </div>
+        <?php endif; ?>
       </div>
+  
+    <?php if ( !get_field( 'hide_nav', 'options' ) ) : ?>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       
+
       <?php if ( is_user_logged_in() ) { ?>
 
       <?php
@@ -76,6 +88,6 @@
   <?php } ?>
 
       </div>
+      <?php endif; ?>
     </div>
   </nav>
-<?php endif; ?>

@@ -492,7 +492,7 @@ p.demo_store {
 
 
 .row-disclaimer {
-    margin-top: 0.5em;
+    margin-top: 2em;
 }
 
 
@@ -853,4 +853,15 @@ p.demo_store {
 .woocommerce-checkout {
     position: relative!important;
     zoom:1!important;
+}
+
+
+
+.create-account {
+    p {
+        display: none; 
+        &.form-row {
+            display: block;
+        }
+    }
 }

@@ -96,6 +96,9 @@ function custom_override_checkout_fields( $fields ) {
          $fields['order']['order_comments']['label'] = $label;
          $fields['order']['order_comments']['placeholder'] = $placeholder;
     endif;
+
+
+    $fields['account']['account_password']['label'] = 'Ønsket adgangskode';
      
 
     return $fields;
