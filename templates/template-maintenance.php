@@ -21,7 +21,7 @@ get_header();?>
       <header>
         <h1><?php _e( 'Kommer Snart', 'barko' ); ?></h1>
       </header>
-      <p class="lead"><?php _e( 'Vi lancerer d. 1. marts 2017. Vi glæder os til at byde dig velkommen.', 'barko' ); ?></p>
+      <p class="lead"><?php _e( 'Vi lancerer d. 15. marts 2017. Vi glæder os til at byde dig velkommen.', 'barko' ); ?></p>
     </article>
   </section>
 </main>
